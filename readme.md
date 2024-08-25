@@ -4,13 +4,13 @@ This repo contains a set of Dockerfiles for building minimal, clean images, insp
 
 I can't explain much better than I did in the original rant email to my colleagues.
 
-    <rant>
-    I'm somewhat disappointed with the state of dockerhub base images. If you try to trace the source Dockerfile instructions, many of these contain completely obscene sequences of commands and often resort to untar'ing some large pre-prepared archive fetched from some download site, or some .tar.xz that is committed beside the Dockerfile, or hard coded download URLs becoming stale, or 3rd party apt repos with expired keys etc, often resulting in images that are amd64 only. 🤦‍♂️
-    
-    So, in my own time,  I'm considering getting my head around cleanly tying GitHub repos with GitHub Actions to build and push to DockerHub, without any obscure 'curl | tar' rubbish. (since I should know these systems better anyway)
-    
-    I've had this exact same problem when dealing with my video tools at home (on M2 cpu) and Kubernetes images. "Just trust our *trusted* dockerhub image that we build by downloading everything from random sites". To which the suggested solution seems to be to use version specific tags rather than :latest, implying you shouldn't trust :latest!
-    </rant>
+> \<rant\>
+> I'm somewhat disappointed with the state of dockerhub base images. If you try to trace the source Dockerfile instructions, many of these contain completely obscene sequences of commands and often resort to untar'ing some large pre-prepared archive fetched from some download site, or some .tar.xz that is committed beside the Dockerfile, or hard coded download URLs becoming stale, or 3rd party apt repos with expired keys etc, often resulting in images that are amd64 only. 🤦‍♂️
+> 
+> So, in my own time,  I'm considering getting my head around cleanly tying GitHub repos with GitHub Actions to build and push to DockerHub, without any obscure 'curl | tar' rubbish. (since I should know these systems better anyway)
+> 
+> I've had this exact same problem when dealing with my video tools at home (on M2 cpu) and Kubernetes images. "Just trust our *trusted* dockerhub image that we build by downloading everything from random sites". To which the suggested solution seems to be to use version specific tags rather than :latest, implying you shouldn't trust :latest!
+> \</rant\>
 
 
 ## Issues I've encountered
